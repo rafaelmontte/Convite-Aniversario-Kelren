@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    user-select: none;
+}
+
+.section-one {
+    background-image: url("../img/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & .gold-texture-1 {
+        position: absolute;
+        top: 0;
+        left: -9rem;
+        width: 65rem;
+        z-index: -1;
+    }
+
+    & .gold-texture-2 {
+        position: absolute;
+        bottom: -3rem;
+        right: 0;
+        width: 65rem;
+        z-index: -1;
+    }
+
+    & .rosas-left,
+    & .rosas-center,
+    & .rosas-rigth,
+    & .folha-center {
+        position: absolute;
+        transition: all 300ms ease-in;
+        z-index: 19999;
+    }
+
+    & .rosas-left {
+        top: -11rem;
+        left: 3rem;
+    }
+
+    & .rosas-center, & .folha-center {
+        top: 0;
+        left: 50%;
+        right: 50%;
+        transform: translate(-35%, -47%);
+    }
+
+    & .rosas-rigth {
+        top: -11rem;
+        right: -15rem;
+        z-index: 9999;
+    }
+
+    & .folha-center {
+        z-index: -1;
+    }
+
+    & .folhas-bg {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 62%);
+        width: 100%;
+        transition: all 300ms ease-in;
+    }
+
+    & .idade {
+        position: absolute;
+    }
+
+    & .container-foto {
+        position: absolute;
+        transform: rotate(-15deg);
+        max-width: 28rem;
+        z-index: 90;
+    }
+
+    & .container-foto .foto {
+        width: 100%;
+    }
+
+    & .container-foto.box-1 {
+        top: 5rem;
+        right: -15px;
+    }
+
+    & .container-foto.box-2 {
+        bottom: 6rem;
+        left: -1.5rem;
+    }
+
+    & .box-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999999999999999;
+        width: 70rem;
+        margin-top: -4rem;
+
+        & img.title {
+            width: 100%;
+        }
+
+        & p {
+            text-align: center;
+            font-family: "Arapey", serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 3rem;
+            color: #8F3726;
+            overflow: visible;
+            position: relative;
+            bottom: 4rem;
+        }
+    }
+
+    & .box-date {
+        overflow: visible;
+        position: relative;
+        bottom: 2.5rem;
+    }
+
+    & .box-date h2 {
+        color: #734000;
+        font-family: "Baskervville Display PT", serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+
+    & .box-date .container-date-hours {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & p {
+            color: #520e04;
+            font-family: "Baskervville Display PT", serif;
+            text-transform: uppercase;
+            font-size: 3.5rem;
+        }
+
+        & img {
+            width: 9rem;
+            padding-top: .5rem;
+            margin: 0 0 0 1.5rem;
+        }
+    }
+
+
+    & .box-icons {
+        width: 35rem;
+        position: relative;
+        z-index: 100000000;
+        overflow: visible;
+    }
+
+    & .box-icons h4 {
+        text-align: center;
+        font-family: "Arapey", serif;
+        font-weight: bold;
+        font-size: 2.4rem;
+        color: #8F3726;
+        margin-bottom: 10px;
+    }
+
+    & .box-icons .icons-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    & .box-icons .icons-container .cicle {
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .box-icons .icons-container .cicle a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #F2EDE9;
+        font-size: 4rem;
+        width: 7rem;
+        height: 7rem;
+        background-color: #8F3726;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 200ms ease-in-out;
+    }
+
+    & .box-icons .icons-container .cicle a:hover {
+        background-color: #F2EDE9;
+        color: #8F3726;
+        border: 1px solid #8F3726;
+    }
+
+    & .box-icons .icons-container .cicle.location {
+        margin-top: -1rem;
+    }
+
+    & .box-icons .icons-container .cicle.checking a {
+        font-size: 6rem;
+    }
+
+    & .box-icons .icons-container .cicle p {
+        color: #8F3726;
+        text-align: center;
+        font-family: "Arapey", serif;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+}
+
+.section-two {
+    background-color: #f2ede9;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 3rem;
+    position: relative;
+    overflow-x: hidden;
+
+    & h1 {
+        text-align: center;
+        font-size: 7rem;
+        font-family: "Baskervville", serif;
+        font-weight: lighter;
+        line-height: 7rem;
+        color: #000;
+        overflow: visible;
+        margin-top: 3rem;
+    }
+
+    & .container-info {
+        margin-left: 16rem;
+        margin-top: 5rem;
+        max-width: 100vw;
+        width: 73rem;
+
+        &>p {
+            font-family: "Baskervville", serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8F3726;
+            margin-bottom: 2rem;
+            line-height: 30px;
+            padding-left: 3rem;
+
+            & span {
+                font-style: italic;
+                font-size: 1.5rem;
+            }
+        }
+
+        & .info-n {
+            font-family: "Poppins", sans-serif;
+
+            & p {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+
+            & ul {
+                list-style-type: disc;
+                padding-left: 7rem;
+                margin: 2rem 0;
+            }
+
+            & ul li {
+                font-size: 1.6rem;
+                overflow: visible;
+            }
+
+            & p:last-child {
+                margin-left: 10rem;
+
+                & a {
+                    font-style: italic;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    & img {
+        position: absolute;
+    }
+
+    & img.line {
+        top: -80px;
+        left: -22px;
+        width: 50rem;
+    }
+
+    & img.rosa {
+        top: -15px;
+        right: -10px;
+        width: 25rem;
+        z-index: 1;
+    }
+
+    & img.blur {
+        top: -170px;
+        right: -50px;
+        width: 60rem;
+        z-index: 0;
+    }
+
+    & img.plant {
+        bottom: 0;
+        right: 0;
+        width: 50rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .section-one {
+        & .gold-texture-1 {
+            position: absolute;
+            top: 0;
+            left: -9rem;
+            width: 65rem;
+            z-index: 0;
+        }
+    
+        & .gold-texture-2 {
+            position: absolute;
+            bottom: -3rem;
+            right: 0;
+            width: 65rem;
+            z-index: 0;
+        }
+    
+        & .rosas-left,
+        & .rosas-center,
+        & .rosas-rigth,
+        & .folha-center {
+            width: 50rem;
+        }
+    
+        & .rosas-left {
+            top: -10rem;
+            left: -5rem;
+        }
+    
+        & .rosas-rigth {
+            top: -10rem;
+            right: -22rem;
+        }
+    
+        & .folha-center {
+            z-index: -1;
+            top: 2rem;
+            width: 51rem;
+        }
+
+        & .idade {
+            width: 50rem;
+        }
+    
+        & .container-foto {
+            max-width: 20rem;
+        }
+        
+        & .container-foto.box-1 {
+            top: 3rem;
+            right: -1rem;
+        }
+    
+        & .container-foto.box-2 {
+            bottom: 4rem;
+        }
+
+        & .box-intro {
+            width: 60rem;
+            margin-top: -2rem;
+    
+            & p {
+                font-size: 2.8rem;
+                bottom: 3rem;
+            }
+        }
+
+        & .box-icons {
+            top: -2rem;
+
+            & h4 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .section-two {
+        & h1 {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+
+        & .container-info {
+            margin-left: 9rem;
+            margin-top: 3rem;
+            width: 63rem;
+        }
+
+        & p {
+            font-size: 1.6rem !important;
+        }
+
+        & .info-n {
+            & p {
+                font-size: 1.6rem !important;
+            }
+
+            & ul {
+                padding-left: 3.5rem !important;
+                margin: 1rem 0 !important;
+            }
+
+            & ul li {
+                font-size: 1.4rem !important;
+            }
+        }
+
+        & img.line {
+            width: 45rem;
+        }
+
+        & img.blur {
+            width: 50rem;
+        }
+
+        & img.plant {
+            width: 45rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section-one {   
+        & .rosas-left {
+            left: -18rem;
+        }
+    
+        & .rosas-rigth {
+            top: -10rem;
+            right: -35rem;
+        }
+
+        & .container-foto {
+            max-width: 20rem;
+        }
+        
+        & .container-foto.box-1 {
+            top: 3rem;
+            right: -1rem;
+        }
+    
+        & .container-foto.box-2 {
+            bottom: 4rem;
+        }
+
+        & .box-intro {
+            margin-top: -1rem;
+        }
+
+        & .box-date {
+            bottom: 1rem !important;
+        }
+    
+        & .box-date h2 {
+            font-size: 4rem;
+        }
+    
+        & .box-date .container-date-hours {
+            & p {
+                font-size: 2.5rem;
+            }
+    
+            & img {
+                width: 9rem !important;
+                padding-top: .5rem;
+                margin: 0 0 0 1.5rem;
+            }
+        }
+
+        & .box-icons {
+            top: 0rem;
+
+            & h4 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    & .container-foto {
+        max-width: 15rem !important;
+    }
+
+    & .container-foto.box-1 {
+        top: 2.5rem !important;
+        right: -15px;
+    }
+
+    & .gold-texture-1 {
+        top: 0;
+        left: -15rem !important;
+        width: 55rem !important;
+    }
+
+    & .gold-texture-2 {
+        bottom: 0;
+        right: -15rem !important;
+        width: 55rem !important;
+    }
+
+    & .idade {
+        width: 50rem;
+    }
+
+    & .box-intro {
+        top: -4rem !important;
+
+        & img.title {
+            display: block;
+            width: 55rem !important;
+        }
+
+        & p {
+            font-size: 2.4rem !important;
+            bottom: 3rem !important;
+        }
+    }
+
+    & .box-date {
+        overflow: visible;
+        position: relative;
+        bottom: 4rem !important;
+    }
+
+    & .box-date h2 {
+        font-size: 2rem !important;
+    }
+
+    & .box-date img {
+        width: 32rem !important;
+    }
+
+    & .box-icons {
+        bottom: 2rem !important;
+    }
+
+    & .box-icons h4 {
+        font-size: 1.7rem !important;
+    }
+
+    & .box-icons .icons-container .cicle a {
+        font-size: 3.5rem !important;
+    }
+
+    & .box-icons .icons-container .cicle.checking a {
+        font-size: 5rem !important;
+    }
+
+    & .box-icons .icons-container .cicle p {
+        font-size: 1.4rem !important;
+    }
+
+
+    .section-two {
+        & h1 {
+            font-size: 4rem !important;
+            line-height: 4rem !important;
+            margin-top: 1rem !important;
+            position: relative;
+            z-index: 9999;
+        }
+
+        & .container-info {
+            margin-left: 2rem !important;
+            width: 55rem;
+            position: relative;
+            z-index: 9999;
+
+            &>p {
+                font-size: 1.4rem !important;
+                margin-bottom: 2rem;
+            }
+
+            & .info-n {
+
+                & p {
+                    font-size: 1.4rem !important;
+                }
+
+                & ul li {
+                    font-size: 1.4rem !important;
+                }
+            }
+        }
+
+        & img.line {
+            width: 40rem;
+        }
+
+        & img.rosa {
+            width: 22rem;
+        }
+
+        & img.blur {
+            top: -12rem;
+            width: 40rem;
+        }
+
+        & img.plant {
+            width: 38rem;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .section-one {
+        justify-content: space-evenly;   
+        & .rosas-left, & .rosas-rigth {
+            display: none;
+        }
+
+        & .rosas-center, & .folha-center {
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        & .container-foto {
+            max-width: 12rem !important;
+        }
+
+        & .box-intro {
+            width: 40rem;
+    
+            & img.title {
+                width: 100% !important;
+            }
+    
+            & p {
+                font-size: 1.7rem !important;
+                bottom: 2rem !important;
+            }
+        }
+    
+        & .box-date .container-date-hours {
+            & p {
+                font-size: 1.7rem;
+            }
+    
+            & img {
+                width: 6rem !important;
+                padding-top: .5rem;
+                margin: 0 0 0 1.5rem;
+            }
+        }
+
+        & .box-icons {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            & h4 {
+                font-size: 1.6rem !important;
+            }
+        }
+
+        & .folhas-bg {
+            left: 50%;
+            right: 50%;
+            transform: translate(-78%, 60%);
+            width: 300vw;
+        }
+    }
+
+    & .gold-texture-1 {
+        top: 0;
+        left: 0 !important;
+    }
+
+
+    & .idade {
+        width: 30rem !important;
+    }
+
+    & .box-icons .icons-container .cicle {
+        width: auto !important;
+        margin: 0 .6rem !important;
+    }
+
+    & .box-icons .icons-container .cicle:first-child {
+        position: relative;
+        bottom: .5rem !important;
+    }
+
+    & .box-icons .icons-container .cicle a {
+        width: 5rem !important;
+        height: 5rem !important;
+        font-size: 2.5rem !important;
+    }
+
+    & .box-icons .icons-container .cicle.checking a {
+        font-size: 3.3rem !important;
+    }
+
+
+    .section-two {
+        padding: 3rem !important;
+
+        & h1 {
+            margin-top: 4rem !important;
+            font-size: 3.3rem !important;
+            line-height: 3rem !important;
+        }
+
+        & img.line {
+            width: 30rem !important;
+        }
+
+        & img.rosa {
+            width: 25rem !important;
+            top: -4rem !important;
+            right: -6rem;
+        }   
+
+        & img.plant {
+            width: 30rem !important;
+        }
+
+        & .container-info {
+            margin-left: 0 !important;
+            width: 100% !important;
+    
+            & > p {
+                font-weight: 500;
+                font-size: 1.6rem !important;
+                line-height: 2.5rem !important;
+                padding-left: 0 !important;
+    
+                & span {
+                    font-size: 1.2rem !important;
+                }
+            }
+    
+            & .info-n { 
+                font-size: 1.6rem !important;
+                & p {
+                    padding-left: 1rem;
+                }
+    
+                & p:last-child {
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+}
